@@ -1,0 +1,200 @@
+
+####################   Group 47 Project 1  #####################
+
+
+##########################################################
+#                   'Enumeration Algorithm'
+##########################################################
+
+
+Returned Results
+
+ |-- Array: array1       
+       Returned:           
+           (34, 3, 13)     
+           Sum      SubArray                                     
+           34       [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19]        
+
+ |-- Array: array2       
+       Returned:           
+           (30, 0, 4)      
+           Sum      SubArray                                     
+           30       [2, 9, 8, 6, 5]                              
+
+ |-- Array: array3       
+       Returned:           
+           (50, 6, 11)     
+           Sum      SubArray                                     
+           50       [23, 24, -1, -7, -8, 19]                     
+
+ |-- Array: array4       
+       Returned:           
+           (187, 2, 6)     
+           Sum      SubArray                                     
+           187      [59, 26, -53, 58, 97]                        
+
+ |-- Array: array5       
+       Returned:           
+           (7, 0, 3)       
+           Sum      SubArray                                     
+           7        [3, 2, 1, 1]                                 
+
+ |-- Array: array6       
+       Returned:           
+           (210, 0, 2)     
+           Sum      SubArray                                     
+           210      [12, 99, 99]                                 
+
+ |-- Array: array7       
+       Returned:           
+           (6, 3, 6)       
+           Sum      SubArray                                     
+           6        [4, -1, 2, 1]                                
+
+##########################################################
+#                   'Better Enumeration Algorithm'
+##########################################################
+
+
+Returned Results
+
+ |-- Array: nums1        
+       Returned:           
+           (34, 3, 13)     
+           Sum      SubArray                                     
+           34       [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19]        
+
+ |-- Array: nums2        
+       Returned:           
+           (30, 0, 4)      
+           Sum      SubArray                                     
+           30       [2, 9, 8, 6, 5]                              
+
+ |-- Array: nums3        
+       Returned:           
+           (50, 6, 11)     
+           Sum      SubArray                                     
+           50       [23, 24, -1, -7, -8, 19]                     
+
+ |-- Array: nums4        
+       Returned:           
+           (187, 2, 6)     
+           Sum      SubArray                                     
+           187      [59, 26, -53, 58, 97]                        
+
+ |-- Array: nums5        
+       Returned:           
+           (7, 0, 3)       
+           Sum      SubArray                                     
+           7        [3, 2, 1, 1]                                 
+
+ |-- Array: nums6        
+       Returned:           
+           (210, 0, 2)     
+           Sum      SubArray                                     
+           210      [12, 99, 99]                                 
+
+ |-- Array: nums7        
+       Returned:           
+           (6, 3, 6)       
+           Sum      SubArray                                     
+           6        [4, -1, 2, 1]                                
+
+##########################################################
+#                   'Divide and Conquer Algorithm'
+##########################################################
+
+
+Returned Results
+
+ |-- Array: nums1        
+       Returned:           
+           (34, 3, 13)     
+           Sum      SubArray                                     
+           34       [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19]        
+
+ |-- Array: nums2        
+       Returned:           
+           (30, 0, 4)      
+           Sum      SubArray                                     
+           30       [2, 9, 8, 6, 5]                              
+
+ |-- Array: nums3        
+       Returned:           
+           (50, 6, 11)     
+           Sum      SubArray                                     
+           50       [23, 24, -1, -7, -8, 19]                     
+
+ |-- Array: nums4        
+       Returned:           
+           (187, 2, 6)     
+           Sum      SubArray                                     
+           187      [59, 26, -53, 58, 97]                        
+
+ |-- Array: nums5        
+       Returned:           
+           (7, 0, 3)       
+           Sum      SubArray                                     
+           7        [3, 2, 1, 1]                                 
+
+ |-- Array: nums6        
+       Returned:           
+           (210, 0, 2)     
+           Sum      SubArray                                     
+           210      [12, 99, 99]                                 
+
+ |-- Array: nums7        
+       Returned:           
+           (6, 3, 6)       
+           Sum      SubArray                                     
+           6        [4, -1, 2, 1]                                
+
+##########################################################
+#                   'Linear Algorithm'
+##########################################################
+
+
+Returned Results
+
+ |-- Array: nums1        
+       Returned:           
+           (34, 3, 13)     
+           Sum      SubArray                                     
+           34       [8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19]        
+
+ |-- Array: nums2        
+       Returned:           
+           (30, 0, 4)      
+           Sum      SubArray                                     
+           30       [2, 9, 8, 6, 5]                              
+
+ |-- Array: nums3        
+       Returned:           
+           (50, 6, 11)     
+           Sum      SubArray                                     
+           50       [23, 24, -1, -7, -8, 19]                     
+
+ |-- Array: nums4        
+       Returned:           
+           (187, 2, 6)     
+           Sum      SubArray                                     
+           187      [59, 26, -53, 58, 97]                        
+
+ |-- Array: nums5        
+       Returned:           
+           (7, 0, 3)       
+           Sum      SubArray                                     
+           7        [3, 2, 1, 1]                                 
+
+ |-- Array: nums6        
+       Returned:           
+           (210, 0, 2)     
+           Sum      SubArray                                     
+           210      [12, 99, 99]                                 
+
+ |-- Array: nums7        
+       Returned:           
+           (6, 3, 6)       
+           Sum      SubArray                                     
+           6        [4, -1, 2, 1]                                
+
