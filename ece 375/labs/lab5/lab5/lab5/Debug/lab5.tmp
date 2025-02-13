@@ -1,0 +1,54 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega128"</DEVICE>
+ <WORKING_DIR>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/Program Files\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>D:\Program Files\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/Program Files\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m128def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\Debug\lab5.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>lab5.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>lab5.map</FILE>
+  <FILE>lab5.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INIT><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>48</LINE></INIT>
+  <MAIN><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>62</LINE></MAIN>
+  <COMPOUND><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>210</LINE></COMPOUND>
+  <DONE><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>106</LINE></DONE>
+  <ADD16><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>119</LINE></ADD16>
+  <ADD16_OP1><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>402</LINE></ADD16_OP1>
+  <ADD16_OP2><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>404</LINE></ADD16_OP2>
+  <ADD16_Result><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>408</LINE></ADD16_Result>
+  <skip><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>153</LINE></skip>
+  <SUB16><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>161</LINE></SUB16>
+  <SUB16_OP1><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>412</LINE></SUB16_OP1>
+  <SUB16_OP2><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>414</LINE></SUB16_OP2>
+  <SUB16_Result><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>418</LINE></SUB16_Result>
+  <MUL24><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>196</LINE></MUL24>
+  <OperandD><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>381</LINE></OperandD>
+  <OperandE><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>383</LINE></OperandE>
+  <OperandF><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>385</LINE></OperandF>
+  <MUL16><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>281</LINE></MUL16>
+  <addrB><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>395</LINE></addrB>
+  <LAddrP><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>396</LINE></LAddrP>
+  <MUL16_OLOOP><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>308</LINE></MUL16_OLOOP>
+  <addrA><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>394</LINE></addrA>
+  <MUL16_ILOOP><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>315</LINE></MUL16_ILOOP>
+  <FUNC><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>359</LINE></FUNC>
+  <MUL24_OP1><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>423</LINE></MUL24_OP1>
+  <MUL24_OP2><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>425</LINE></MUL24_OP2>
+  <MUL24_RESULT><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>427</LINE></MUL24_RESULT>
+  <MUL24_ADDER><FILE>D:\Documents\School\ece 375\labs\lab5\lab5\lab5\main.asm</FILE><LINE>429</LINE></MUL24_ADDER>
+ </LABELS>
+</ASSEMBLER_INFO>
