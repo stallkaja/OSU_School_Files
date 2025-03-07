@@ -1,0 +1,20 @@
+iptables --flush
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -i eth1 -j ACCEPT
+iptables -A FORWARD -i eth2 -p udp --dport 53 -j ACCEPT
+iptables -A FORWARD -i eth2 -p udp --dport 123 -j ACCEPT
+iptables -A FORWARD -i eth2 -j DROP
+iptables -A FORWARD -p tcp -d 10.0.0.10 --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -p tcp -d 10.0.0.10 --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -p tcp -s 203.0.113.0/24 -d 10.0.0.20 --dport 21 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -p tcp -s 198.51.100.1 --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+SMTP_WHITELIST=("203.0.113.50" "203.0.113.51" "203.0.113.52")  # Replace with your allowed IPs
+if [ -f /etc/iptables/smtp_whitelist.txt ]; then
+    while IFS= read -r ip; do
+        iptables -A FORWARD -p tcp -s "$ip" -d 192.168.1.200 --dport 25 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+    done < /etc/iptables/smtp_whitelist.txt
+fi
+iptables -A INPUT -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
+iptables -A FORWARD -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
+
