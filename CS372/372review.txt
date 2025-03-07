@@ -1,0 +1,115 @@
+
+connector vs crossover. The pin essentially fit together so that data can be transmitted
+ie the transmiting pit on the connector will match up with the recieving pin on the crossover
+rf 45
+pin 1, 2: transmist
+3,6: recieve
+others not used. sometimes used for phone network.
+
+
+baseband uses a small part of the wave spectrum and sends only one signal at a time
+boradband uses a larger part of the spectrum and uses frequency division to send multiple signals
+
+packet switching vs circuit switching
+packet switching determines the route along the way
+circuit switching determines route for connection before
+
+packet advantages
+	security
+	bandwidth used to full potential
+	devices of different speeds can communicate
+	not affected by line failure, can redirect signal
+	availability, no waiting for direct connection
+	in disasters when telephone is down(circuit) email and text sometimes works (Packet)	
+disadvantages
+	under heavy use there can be a delay
+	data packets ca get lost
+	protocols are needed for reliable transfer
+	not so good for streaming things where order matters(dropping a frame in a video)
+
+circuit: three phases 1 establish connection, 2 transfer data, 3 diconnect
+advantages
+	no interference no sharing
+	the user is guaranteed the full bandwidth for duration of connection
+disadvantages
+	inefficent: equipment may sit idle for long periods while connection is open but no data is sent
+	takes a long time to set up connection
+	during disaster direct connections may be down
+
+primarly developed for voice protocol
+	
+application:supporting network applications
+transport:process to process data transfer
+network: routing of datagrams from source to destination
+link: data transfer between neighboring network elements
+physical:carries actual signals between devices
+
+application layer, highest layer: where applications run
+ip address identifies host
+socket identifies application on host
+connection is a socket pair, client ip client port server ip and server port
+
+
+packet delay
+1 nodal processing, check bit erros and detmine outputlink
+2 queueing delay, waiting at output depends on congestion of router
+2 transmission delay, expressed in transmission rate or r,. transmission delay = L/R L:packet length in bits
+3 propagaion delay d:length of physical link in beters s:propagation speed. delay = d/s
+TCP: connection oriented: connection set up
+
+reliable transport: between sending and recieving
+flow control: sender wont overwhelm receiver
+congestion control: throttle sender when network overloaded
+does not provide timing or minimum bandwidth
+
+TCP carries a lot of over head
+
+connection-oriented: initializes sender reciever state before data connection
+point to point: one sender one receiver and bi-directional data flow
+in-order byte stream": cumulative byte count and ack of bytes recieved
+pipelined: congestion and flow control
+flow control: makes sure the sender cant overwhelm the reciever
+
+
+pipelining: sender transmits multiple packets
+flow control: reciever must have buffer to hold packets as the reciever app uses the data. The "flow" of data
+into the buffer must be controlled so the data is coming in as fast as the reciever's app can use it. The nak response
+contains data used to resize the amount of data to be sent out at once
+UDP:
+"unreliable:
+does not provide connewction setup, reliability,flow control, congestion control, or bandwidth guarntee 
+
+appplication                                   Transport protocol
+email							TCP				
+remote terminal						TCP
+web							TCP
+file transfer						TCP
+streaming multimedia					TCP or UDP
+internet telephone					UDP
+DNS look up						UDP
+
+Cookies
+header:HTTP response message
+header:HTTP request message
+file:file kept on host managed by browser
+back end database at website
+
+provide:
+authorization
+shopping carts
+recommendataions based on web activity
+user session state (web email)
+
+proxy server: caches https requests and uses this cached data to send data without involving the origin server. 
+this allows the proxy server to contact an origin server once and then act as the source for any clients connecting to the proxy
+This helps network traffic massivly. Reduces over all traffic of requests. Reduces traffic between proxy servers and origin. Ligthens load
+on small organizations. Because instead of small orgs having to handle huge traffic, they transmist to a proxy which handles the traffic.
+
+potential issue. Proxy server having out of data data. Fixed with conditional: GET. The proxy server can sent a conditional
+get to the origin server to check if the object is up to date.
+
+FTP: file transfer protocol
+client and server
+requires two connections. Client contacts server to setup control connection. Allows client to browse server. Server opens
+second connection to do file transfer. After file is transfered the file connection is closed and control connection is remained open
+This allows for saving state. 
