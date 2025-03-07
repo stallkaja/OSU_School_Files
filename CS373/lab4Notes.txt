@@ -1,0 +1,20 @@
+14 serial 4800 baud serial port This is not
+17 serial 4800 baud serial port unfortunately try a different pin
+15 nothing Rec/Trans
+16 nothing Rec/Trans
+20 serial port 9600 baurd When all else fails try serial ports
+21 nothing
+22 nothing
+23 nothing
+12 nothing
+11 nothing
+10 nothing
+9 nothing
+8 serial 19200 baud The secret message is THERE: IS NO SPOON Nearly Done with CS373
+7 nothing
+6 serial port 9600 baurd When all else fails try serial ports
+5
+4
+3
+2
+1
