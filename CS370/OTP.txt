@@ -1,0 +1,8 @@
+The following modules need to be installed, use pip to install them.
+qrcode
+pyotp
+pillow
+
+There is no make file because this is a python file, usage:
+python OTP --generate-qr
+python OTP --get-otp
