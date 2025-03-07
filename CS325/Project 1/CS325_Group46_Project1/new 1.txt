@@ -1,0 +1,173 @@
+###########################
+#  Other Functions
+###########################
+
+
+
+def createFile():
+	if os.path.exists('MSS_Results.txt'):
+		os.remove('MSS_Results.txt')
+
+	return open('MSS_Results.txt', 'w')
+
+def NL():
+	outputF.write("\n")
+
+def formatExpectedRow(summation, arr):
+	return " %-4s %-4s %-8s %-45s" % ("", "", summation, arr)
+
+def formatOutputFlow(heading, text):
+	if heading == 1:
+		return " %-2s %-20s" % ("|--", text)
+	elif heading == 2:
+		return " %-2s %-2s %-20s" % ("", "",text)
+	elif heading == 3:
+		return " %-2s %-2s %-20s" % ("", "", text)
+	elif heading == 4:
+		return " %-2s %-2s %-2s %-20s" % ("", "", "", text)
+	else:
+		return ""
+
+def outputSectionHeader(functionName):
+	titleText = "#                   '" + functionName + "'\n"
+
+	outputF.write("##########################################################\n")
+	outputF.write(titleText)
+	outputF.write("##########################################################\n")
+	NL()
+	NL()
+
+def outputSubSectionHeader(sectionName):
+	sectionNameText = "___________________ " + sectionName
+	outputF.write(sectionName)
+	NL()
+	NL()
+
+def outputResults(testArray, arrayName, results, expectedSum, expectedArray):
+	arrayNameFormatted = 'Array: {}'.format(arrayName)
+	outputF.write(formatOutputFlow(1, arrayNameFormatted))
+	NL()
+
+	# Returned
+	outputF.write(formatOutputFlow(2, "Returned:"))
+	NL()
+	resultsFormatted = "    {}".format(str(results))
+	outputF.write(formatOutputFlow(3, resultsFormatted))
+	NL()
+
+	resultSum = str(results[0])
+	resultSubArray = str(testArray[results[1]:(results[2] + 1)])
+	outputF.write(formatExpectedRow("Sum", "SubArray"))
+	NL()
+	outputF.write(formatExpectedRow(resultSum, resultSubArray))
+	NL()
+	NL()
+
+
+###########################
+# Main Functionality
+###########################
+
+
+nums1 = [1, 4, -9, 8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19, -10, -11]
+nums1ExpectedArray = "[8, 1, 3, 3, 1, -1, -4, -6, 2, 8, 19]"
+nums1ExpectedSum = "34"
+
+nums2 = [2, 9, 8, 6, 5, -11, 9, -11, 7, 5, -1, -8, -3, 7, -2]
+nums2ExpectedArray = "[2, 9, 8, 6, 5]"
+nums2ExpectedSum = "30"
+
+nums3 = [10, -11, -1, -9, 33, -45, 23, 24, -1, -7, -8, 19]
+nums3ExpectedArray = "[23, 24, -1, -7, -8, 19]"
+nums3ExpectedSum = "50"
+
+nums4 = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+nums4ExpectedArray = "[59, 26, -53, 58, 97]"
+nums4ExpectedSum = "187"
+
+nums5 = [3, 2, 1, 1, -8, 1, 1, 2, 3]
+nums5ExpectedArray = "[3, 2, 1, 1]"
+nums5ExpectedSum = "7"
+
+nums6 = [12, 99, 99, -99, -27, 0, 0, 0, -3, 10]
+nums6ExpectedArray = "[12, 99, 99]"
+nums6ExpectedSum = "210"
+
+nums7 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+nums7ExpectedArray = "[4, -1, 2, 1]"
+nums7ExpectedSum = "6"
+
+
+outputF = createFile()
+
+
+NL()
+outputF.write("####################   Group 33 Project 1  #####################")
+NL()
+NL()
+NL()
+
+# Enumeration
+outputSectionHeader("Enumeration Algorithm")
+outputSubSectionHeader("Returned Results")
+
+outputResults(nums1, "array1", max_sub1(nums1), nums1ExpectedSum, nums1ExpectedArray)
+outputResults(nums2, "array2", max_sub1(nums2), nums2ExpectedSum, nums2ExpectedArray)
+outputResults(nums3, "array3", max_sub1(nums3), nums3ExpectedSum, nums3ExpectedArray)
+outputResults(nums4, "array4", max_sub1(nums4), nums4ExpectedSum, nums4ExpectedArray)
+outputResults(nums5, "array5", max_sub1(nums5), nums5ExpectedSum, nums5ExpectedArray)
+outputResults(nums6, "array6", max_sub1(nums6), nums6ExpectedSum, nums6ExpectedArray)
+outputResults(nums7, "array7", max_sub1(nums7), nums7ExpectedSum, nums7ExpectedArray)
+
+# Better Enumeration
+outputSectionHeader("Better Enumeration Algorithm")
+outputSubSectionHeader("Returned Results")
+
+outputResults(nums1, "nums1", max_sub2(nums1), nums1ExpectedSum, nums1ExpectedArray)
+outputResults(nums2, "nums2", max_sub2(nums2), nums2ExpectedSum, nums2ExpectedArray)
+outputResults(nums3, "nums3", max_sub2(nums3), nums3ExpectedSum, nums3ExpectedArray)
+outputResults(nums4, "nums4", max_sub2(nums4), nums4ExpectedSum, nums4ExpectedArray)
+outputResults(nums5, "nums5", max_sub2(nums5), nums5ExpectedSum, nums5ExpectedArray)
+outputResults(nums6, "nums6", max_sub2(nums6), nums6ExpectedSum, nums6ExpectedArray)
+outputResults(nums7, "nums7", max_sub2(nums7), nums7ExpectedSum, nums7ExpectedArray)
+
+
+#Divide and Conquer
+outputSectionHeader("Divide and Conquer Algorithm")
+outputSubSectionHeader("Returned Results")
+
+resultsArray = getMaxSubarray(nums1, 0, len(nums1) - 1)
+outputResults(nums1, "nums1", resultsArray, nums1ExpectedSum, nums1ExpectedArray)
+
+resultsArray = getMaxSubarray(nums2, 0, len(nums2) - 1)
+outputResults(nums2, "nums2", resultsArray, nums2ExpectedSum, nums2ExpectedArray)
+
+resultsArray = getMaxSubarray(nums3, 0, len(nums3) - 1)
+outputResults(nums3, "nums3", resultsArray, nums3ExpectedSum, nums3ExpectedArray)
+
+resultsArray = getMaxSubarray(nums4, 0, len(nums4) - 1)
+outputResults(nums4, "nums4", resultsArray, nums4ExpectedSum, nums4ExpectedArray)
+
+resultsArray = getMaxSubarray(nums5, 0, len(nums5) - 1)
+outputResults(nums5, "nums5", resultsArray, nums5ExpectedSum, nums5ExpectedArray)
+
+resultsArray = getMaxSubarray(nums6, 0, len(nums6) - 1)
+outputResults(nums6, "nums6", resultsArray, nums6ExpectedSum, nums6ExpectedArray)
+
+resultsArray = getMaxSubarray(nums7, 0, len(nums7) - 1)
+outputResults(nums7, "nums7", resultsArray, nums7ExpectedSum, nums7ExpectedArray)
+
+
+# Linear
+outputSectionHeader("Linear Algorithm")
+outputSubSectionHeader("Returned Results")
+
+outputResults(nums1, "nums1", max_sub4(nums1), nums1ExpectedSum, nums1ExpectedArray)
+outputResults(nums2, "nums2", max_sub4(nums2), nums2ExpectedSum, nums2ExpectedArray)
+outputResults(nums3, "nums3", max_sub4(nums3), nums3ExpectedSum, nums3ExpectedArray)
+outputResults(nums4, "nums4", max_sub4(nums4), nums4ExpectedSum, nums4ExpectedArray)
+outputResults(nums5, "nums5", max_sub4(nums5), nums5ExpectedSum, nums5ExpectedArray)
+outputResults(nums6, "nums6", max_sub4(nums6), nums6ExpectedSum, nums6ExpectedArray)
+outputResults(nums7, "nums7", max_sub4(nums7), nums7ExpectedSum, nums7ExpectedArray)
+
+outputF.close()
