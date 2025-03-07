@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+    <h1>Stock Search Page</h1>
+
+    <form action="/searchStocks" method="GET" id="searchForm">
+        <fieldset>
+            <legend>Stock Search</legend>
+			<label for="search1">Find the stock with the </label>
+			<input type="radio" id="highest" name="searchType" value="highest">
+			<label for="search2">Highest or the stock with the </label>
+			<input type="radio" id="lowest" name="searchType" value="lowest">
+			<label for="search2">lowest price.</label>
+        </fieldset>
+        <button type="submit">Search</button>
+    </form>
+
+</body>
+
+</html>

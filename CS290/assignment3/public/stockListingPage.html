@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+    <h1>Stock Listing Page</h1>
+
+    <table border="1px solid black";>
+  <tr>
+    <th>Company Name</th>
+    <th>Stock Symbol</th>
+    <th>Current Price</th>
+  </tr>
+  <tr>
+    <td>Splunk</td>
+    <td>SPLK</td>
+    <td>137.55</td>
+  </tr>
+  <tr>
+    <td>Microsoft</td>
+    <td>MSFT</td>
+    <td>232.04</td>
+  </tr>
+    <tr>
+    <td>Oracle</td>
+    <td>ORCL</td>
+    <td>67.08</td>
+  </tr>
+    <tr>
+    <td>Snowflake</td>
+    <td>SNOW</td>
+    <td>235.8</td>
+  </tr>
+    <tr>
+    <td>Terradata</td>
+    <td>TDC</td>
+    <td>44.98</td>
+  </tr>
+</table>
+	<form action="/orderStocks" method="GET" id="purchaseForm">
+        <fieldset>
+            <legend>Order Stocks:</legend>
+            <label>Stock:
+			<br>
+			<input type="radio" id="stock1" name="stock" value="Splunk">
+			<label for="stock1">SPLK</label><br>
+			<input type="radio" id="stock2" name="stock" value="Microsoft">
+			<label for="stock2">MSFT</label><br>
+			<input type="radio" id="stock3" name="stock" value="Oracle">
+			<label for="stock3">ORCL</label><br>  
+			<input type="radio" id="stock4" name="stock" value="Snowflake">
+			<label for="stock4">SNOW</label><br>  
+			<input type="radio" id="stock5" name="stock" value="Terradata">
+			<label for="stock5">TDC</label><br><br>
+            </label>
+            <br />
+            <label>Quantity:
+                <input type="number" name="stockQty" size="30" maxlength="100" required="required">
+            </label>
+            <br />
+        </fieldset>
+        <button type="submit">Submit Purchase</button>
+    </form>
+</body>
+
+</html>
